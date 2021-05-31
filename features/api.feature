@@ -1,22 +1,22 @@
 @screenless
-Feature: Test if the Hostgator Financial CEP API is working properly
+Feature: Testing the Webmotors test Api's
 
-  Testing some possible CEP request scenarios in the daily usage
+  Scenario: Testing the Make Api
+    When the make request is made
+    Then expect the make request result to be the same
+    Then check if the return code was 200
+  
+  Scenario: Testing the Model Api
+    When the model request is made with MakeID 1
+    Then expect the model request result to be the same
+    Then check if the return code was 200
+  
+  Scenario: Testing the Version Api
+    When the version request is made with ModelID 1
+    Then expect the version request result to be the same
+    Then check if the return code was 200
 
-  Scenario Outline: Test CEP api inputs and outputs
-    Given i am searching for CEP "<cep>"
-    When the request is made
-    Then check if the return code was <return_code>
-    Examples:
-      | cep                           | return_code |
-      | 74691755                      | 200         |
-      | 74691-755                     | 200         |
-      | 74.691-755                    | 200         |
-      | 74.691755                     | 200         |
-      | 00000000                      | 404         |
-      | 00.000000                     | 404         |
-      | 00000-000                     | 404         |
-      | 00.000-000                    | 404         |
-      | texto                         | 400         |
-      | texto_com_especiais!@#$*&,.-  | 400         |
-      | 7%204%206%209%201%207%205%205 | 200         |
+  Scenario: Testing the Vehicles Api
+    When the vehicles request is made with Page 1
+    Then expect the vehicles request result to be the same
+    Then check if the return code was 200
