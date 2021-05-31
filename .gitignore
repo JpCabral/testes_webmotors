@@ -1,0 +1,46 @@
+.DS_Store
+.env
+
+# Diretórios ignorados
+
+.idea/
+results/screenshots/*
+!results/screenshots/.gitkeep
+results/report_files/*
+!results/report_files/.gitkeep
+results/files/*
+!results/files/.gitkeep
+
+# Extensões de arquivo ignoradas
+
+*.html
+*.exe
+*.pdf
+*.save
+*.swp
+*.csv
+*.txt
+*.xls
+*.log
+
+### VisualStudioCode ###
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*
+create_budgeting/.vscode
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+
+# Default ignored files
+/workspace.xml
+.idea/
+.idea/*
+!.scannerwork
+.scannerwork/
+.scannerwork/*

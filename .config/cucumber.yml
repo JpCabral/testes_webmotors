@@ -1,0 +1,3 @@
+default:  --format html --out relatorio.html
+
+parallel: --format json_pretty --out 'results/report_files/report<%= ENV['TEST_ENV_NUMBER'] %>.json' --tags 'not @ignore' 
